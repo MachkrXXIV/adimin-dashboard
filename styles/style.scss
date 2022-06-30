@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,900;1,400&family=Tinos:ital,wght@1,700&display=swap");
 
 $purple: hsla(253, 81%, 63%, 0.5);
 $pink: hsla(305, 57%, 85%, 0.5);
@@ -43,7 +43,7 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
 body {
   min-height: 100vh;
   display: grid;
-  grid-template: auto 4fr / 1fr 4fr;
+  grid-template: auto 4fr / minmax(auto, 1fr) 4fr;
 
   nav {
     padding: 1rem;
@@ -54,11 +54,26 @@ body {
     background-color: orange;
 
     a {
-      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      font-size: calc(1rem + 0.2vw);
+      font-weight: 800;
+      text-decoration: none;
     }
 
     i {
       width: 2.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-family: Tinos, system-ui;
+      font-size: calc(2rem + 0.8vw);
+
+      .logo {
+        @include img-sizing(calc(3rem + 2vw));
+      }
     }
 
     .nav-container {
@@ -75,6 +90,11 @@ body {
   header {
     grid-column: 2 / -1;
     background-color: $dark;
+
+    & > div {
+      display: flex;
+      flex: 1;
+    }
   }
 
   main {
