@@ -41,11 +41,14 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
 }
 
 body {
+  margin: 0.2rem;
   min-height: 100vh;
   display: grid;
   grid-template: auto 4fr / minmax(auto, 1fr) 4fr;
+  gap: 0.2rem;
 
   nav {
+    position: relative;
     padding: 1rem;
     display: flex;
     flex-flow: column;
@@ -88,12 +91,64 @@ body {
   }
 
   header {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 3fr;
     grid-column: 2 / -1;
     background-color: $dark;
 
     & > div {
       display: flex;
-      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid green;
+    }
+
+    .top-container {
+      //flex
+
+      .search-container {
+        flex-grow: 2;
+      }
+
+      .top-right-corner {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        font-size: calc(1rem + 0.4vw);
+        font-weight: 700;
+      }
+    }
+
+    .bottom-container {
+      font-size: 1.2rem;
+      img {
+        @include img-sizing(Min(6rem, 10vw));
+        grid-row: 1 / -1;
+      }
+
+      .welcome {
+        display: grid;
+        grid-template: 2fr 1fr / auto 1fr;
+        align-items: flex-end;
+        gap: 1rem;
+        flex: 3;
+
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          align-self: flex-start;
+        }
+      }
+
+      .review-options {
+        display: flex;
+        flex: 1;
+        gap: 1rem;
+      }
     }
   }
 
@@ -104,6 +159,22 @@ body {
     color: $light;
     // background: $bg-gradient;
   }
+}
+
+button {
+  padding: 0 1rem;
+  display: block;
+  background-color: $purple;
+  color: $light;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+}
+
+input {
+  height: 2rem;
+  width: 69%;
+  margin-left: 1rem;
+  border-radius: 2rem;
 }
 
 img {
