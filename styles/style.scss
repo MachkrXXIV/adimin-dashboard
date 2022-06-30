@@ -10,12 +10,18 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
   transition: all 500ms ease-in-out;
 }
 
+@mixin img-sizing($size) {
+  height: $size;
+  width: $size;
+}
+
 @mixin bg-gradient-overlay {
-  background: rgb(117, 84, 237);
+  background: rgb(238, 193, 234);
   background: radial-gradient(
     circle,
-    rgba(117, 84, 237, 1) 0%,
-    rgba(32, 0, 149, 1) 83%,
+    rgba(238, 193, 234, 1) 0%,
+    rgba(117, 84, 237, 1) 56%,
+    rgba(95, 26, 236, 1) 87%,
     rgba(14, 3, 54, 1) 100%
   );
 }
@@ -39,18 +45,34 @@ body {
   grid-template: auto 4fr / 1fr 4fr;
 
   nav {
-    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    grid-row: 1 / -1;
     background-color: orange;
+
+    a {
+      font-size: 1.5rem;
+    }
+
+    .directory-container > * {
+      display: flex;
+    }
+
+    .nav-container {
+      gap: 2rem;
+    }
   }
 
   header {
-    grid-column: 2 / 5;
+    grid-column: 2 / -1;
     background-color: $dark;
   }
 
   main {
     @include bg-gradient-overlay;
-    grid-area: 2 / 5 / 2 / 5;
+    // grid-row: inherit;
     background-color: $dark;
     color: $light;
     // background: $bg-gradient;
@@ -58,7 +80,6 @@ body {
 }
 
 img {
-  height: 3rem;
-  width: 3rem;
+  @include img-sizing(3rem);
   border-radius: 50%;
 }
