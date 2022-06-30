@@ -5,14 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/14c0a8ae56.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+    <nav>
+      <div class="brand">
+        <img class="logo" src="images/aest-logo.png" alt="logo" />
+        <h1>Aestare</h1>
+      </div>
+      <div class="directory-container">
+        <i class="fa-solid fa-house"></i>
+        <a href="home" class="home">Home</a>
+        <i class="fa-solid fa-user"></i>
+        <a href="profile" class="profile">Profile</a>
+        <i class="fa-solid fa-message"></i>
+        <a href="messages" class="messages">Messages</a>
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <a href="history" class="history">History</a>
+        <i class="fa-solid fa-list"></i>
+        <a href="tasks" class="tasks">Tasks</a>
+        <i class="fa-solid fa-users"></i>
+        <a href="communities" class="communities">Communities</a>
+      </div>
+      <div class="misc-container">
+        <i class="fa-solid fa-gear"></i>
+        <a href="settings" class="settings">Settings</a>
+        <i class="fa-solid fa-circle-question"></i>
+        <a href="support" class="support">Support</a>
+        <i class="fa-solid fa-lock"></i>
+        <a href="privacy" class="privacy">Privacy</a>
+      </div>
+    </nav>
     <header>
       <div class="top-container">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -22,7 +50,7 @@
         <h2 class="profile-name">Justin Mach</h2>
       </div>
       <div class="bottom-container">
-        <img src="images/gumball.png" alt="avatar large" />
+        <img class="lrg-avatar" src="images/gumball.png" alt="avatar large" />
         <p class="greeting">Hi there,</p>
         <h2 class="large-profile-name">Justin Mach (@MachkrXXIV)</h2>
         <button class="post">Post</button>
@@ -30,25 +58,6 @@
         <button class="share">Share</button>
       </div>
     </header>
-    <nav>
-      <div class="brand">
-        <img src="images/aest-logo.png" alt="logo" />
-        <h1>Aestare</h1>
-      </div>
-      <div class="directory-container">
-        <a href="home" class="profile">Home</a>
-        <a href="profile" class="profile">Profile</a>
-        <a href="messages" class="messages">Messages</a>
-        <a href="history" class="history">History</a>
-        <a href="tasks" class="tasks">Tasks</a>
-        <a href="communities" class="communities">Communities</a>
-      </div>
-      <div class="misc-container">
-        <a href="settings" class="settings">Settings</a>
-        <a href="support" class="support">Support</a>
-        <a href="privacy" class="privacy">Privacy</a>
-      </div>
-    </nav>
     <main>
       <h2>Your Reviews</h2>
       <h2>Announcements</h2>
