@@ -131,8 +131,8 @@ body header .bottom-container {
 }
 
 body header .bottom-container img {
-  height: Min(6rem, 10vw);
-  width: Min(6rem, 10vw);
+  height: 6em;
+  width: 6em;
   grid-row: 1 / -1;
 }
 
@@ -171,6 +171,11 @@ body header .bottom-container .review-options {
 body main {
   background: #eec1ea;
   background: radial-gradient(circle, #eec1ea 0%, #7554ed 56%, #5f1aec 87%, #0e0336 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template: auto 1fr / 3fr 1fr;
   background-color: #384052;
   color: #efeff1;
 }

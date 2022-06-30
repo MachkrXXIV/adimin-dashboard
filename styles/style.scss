@@ -126,7 +126,7 @@ body {
     .bottom-container {
       font-size: 1.2rem;
       img {
-        @include img-sizing(Min(6rem, 10vw));
+        @include img-sizing(6em);
         grid-row: 1 / -1;
       }
 
@@ -154,10 +154,10 @@ body {
 
   main {
     @include bg-gradient-overlay;
-    // grid-row: inherit;
+    display: grid;
+    grid-template: auto 1fr / 3fr 1fr;
     background-color: $dark;
     color: $light;
-    // background: $bg-gradient;
   }
 }
 
