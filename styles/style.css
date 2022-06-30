@@ -9,6 +9,7 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 2px solid red;
 }
 
 body {
@@ -29,7 +30,7 @@ body nav {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  gap: 3rem;
+  gap: 4rem;
   grid-row: 1 / -1;
   background-color: orange;
 }
@@ -38,10 +39,17 @@ body nav a {
   font-size: 1.5rem;
 }
 
-body nav .directory-container > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body nav i {
+  width: 2.5rem;
+}
+
+body nav .nav-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 
 body nav .nav-container {
