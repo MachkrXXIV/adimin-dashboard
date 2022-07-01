@@ -1,28 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,900;1,400&family=Tinos:ital,wght@1,700&display=swap");
 
 $purple: hsla(253, 81%, 63%, 0.5);
-$pink: hsla(305, 57%, 85%, 0.5);
+$teal: rgba(42, 228, 203, 0.7);
+$pink: hsla(305, 57%, 85%, 0.7);
 $light: hsl(240, 7%, 94%);
 $dark: hsla(222, 19%, 27%, 0.5);
 $darker: hsla(263, 77%, 10%, 0.5);
 $darkest: hsla(263, 89%, 7%, 0.5);
 $bg-gradient: linear-gradient(45deg, $purple, $pink);
-
-@mixin flex-column {
-  display: flex;
-  flex-flow: column;
-}
-
-@mixin img-sizing($size) {
-  height: $size;
-  width: $size;
-}
-
-@mixin glass-morphism {
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
 
 @mixin bg-gradient-overlay {
   background: rgb(238, 193, 234);
@@ -35,8 +20,28 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
   );
 }
 
-@mixin transition-ease {
-  transition: all 500ms ease-in-out;
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+@mixin glass-morphism {
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+@mixin img-sizing($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin sliding-transition($name, $time: 1s) {
+  animation: $name $time ease-in-out;
+}
+
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
 }
 
 @mixin widget {
@@ -78,6 +83,7 @@ body {
   // SIDEBAR----------- //
   nav {
     @include flex-column;
+    @include sliding-transition(slideDown, 1s);
     height: 100%;
     position: fixed;
     padding: 1rem;
@@ -92,7 +98,7 @@ body {
       text-decoration: none;
       color: $light;
 
-      &:visited {
+      &:visited:active {
         color: inherit;
       }
     }
@@ -126,6 +132,7 @@ body {
 
   // HEADER----------- //
   header {
+    @include sliding-transition(slideLeft, 1s);
     padding: 1rem;
     display: grid;
     grid-template-rows: auto 3fr;
@@ -189,6 +196,7 @@ body {
 
   // MAIN----------- //
   main {
+    @include sliding-transition(slideUp, 1s);
     padding: 1rem;
     display: grid;
     grid-template: auto 1fr / 3fr 1fr;
@@ -234,6 +242,20 @@ body {
 }
 
 // COMPONENTS----------- //
+
+a,
+i {
+  @include transition-ease(200ms);
+}
+
+a:hover,
+a:hover > i,
+i:hover {
+  color: $teal;
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
+
 .action-container {
   align-self: flex-end;
 }
@@ -259,6 +281,10 @@ input {
   border-radius: 2rem;
   font-size: 1.5rem;
   color: $light;
+
+  &:focus {
+    outline: 2px solid $teal;
+  }
 }
 
 img {
@@ -268,9 +294,8 @@ img {
 }
 
 main h2 {
-  margin-bottom: 2rem;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-left: 0.5rem;
 }
 
@@ -304,5 +329,39 @@ span {
 
   &:last-child {
     color: hsl(0, 0%, 59%);
+  }
+}
+
+@media screen and (max-width: 961px) {
+  main h2 {
+    font-size: 1.8rem;
+  }
+}
+
+//ANIMATIONS----------------/
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
