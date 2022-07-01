@@ -76,8 +76,8 @@ body {
   margin: 0.5rem;
   min-height: 100vh;
   display: grid;
-  grid-template: auto 4fr / minmax(250px, 0.75fr) 4fr;
-  gap: 0.5rem;
+  grid-template: auto 4fr / minmax(240px, 0.75fr) 4fr;
+  gap: 1rem;
 
   & > * {
     @include glass-morphism;
@@ -282,7 +282,7 @@ button {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 
   &:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.2, 1.2);
     background-color: $teal;
   }
 }

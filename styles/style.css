@@ -20,9 +20,9 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 4fr;
-  -ms-grid-columns: minmax(250px, 0.75fr) 4fr;
-      grid-template: auto 4fr/minmax(250px, 0.75fr) 4fr;
-  gap: 0.5rem;
+  -ms-grid-columns: minmax(240px, 0.75fr) 4fr;
+      grid-template: auto 4fr/minmax(240px, 0.75fr) 4fr;
+  gap: 1rem;
 }
 
 body > * {
@@ -339,8 +339,8 @@ button {
 }
 
 button:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
   background-color: rgba(42, 228, 203, 0.7);
 }
 
