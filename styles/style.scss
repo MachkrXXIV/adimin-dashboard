@@ -248,7 +248,7 @@ input {
   background-color: $darker;
   height: 2rem;
   width: 69%;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   padding: 1rem 0.5rem;
   border-radius: 2rem;
   font-size: 1.5rem;
@@ -264,10 +264,7 @@ main h2 {
   margin-bottom: 2rem;
   font-weight: 600;
   font-size: 1.5rem;
-
-  &:nth-of-type(1) {
-    margin-left: 0.5rem;
-  }
+  margin-left: 0.5rem;
 }
 
 main h3,
