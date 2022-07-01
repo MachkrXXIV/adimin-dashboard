@@ -274,6 +274,13 @@ body main .friends-container {
   grid-column: auto / -1;
 }
 
+body main .friends-container .friend-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
 .action-container {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -285,6 +292,7 @@ button {
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
   padding: 0 1rem;
   display: block;
   background-color: rgba(21, 6, 45, 0.5);
@@ -312,6 +320,7 @@ input {
 img {
   height: 3rem;
   width: 3rem;
+  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -343,5 +352,13 @@ main p {
 
 .announcement-item h4 {
   margin-bottom: 0.5rem;
+}
+
+span {
+  display: block;
+}
+
+span:last-child {
+  color: #969696;
 }
 /*# sourceMappingURL=style.css.map */

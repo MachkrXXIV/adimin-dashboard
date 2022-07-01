@@ -224,6 +224,11 @@ body {
       @include glass-morphism;
       @include widget;
       grid-column: auto / -1;
+
+      .friend-item {
+        display: flex;
+        gap: 0.5rem;
+      }
     }
   }
 }
@@ -235,6 +240,7 @@ body {
 
 button {
   @include glass-morphism;
+  cursor: pointer;
   padding: 0 1rem;
   display: block;
   background-color: $darker;
@@ -257,6 +263,7 @@ input {
 
 img {
   @include img-sizing(3rem);
+  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -289,5 +296,13 @@ main p {
 
   h4 {
     margin-bottom: 0.5rem;
+  }
+}
+
+span {
+  display: block;
+
+  &:last-child {
+    color: hsl(0, 0%, 59%);
   }
 }
