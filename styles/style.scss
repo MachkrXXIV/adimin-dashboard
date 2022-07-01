@@ -131,6 +131,7 @@ body {
     display: grid;
     grid-template-rows: auto 3fr;
     grid-column: 2 / -1;
+    row-gap: 1rem;
     background-color: $dark;
 
     & > div {
@@ -236,17 +237,22 @@ button {
   @include glass-morphism;
   padding: 0 1rem;
   display: block;
-  background-color: $purple;
+  background-color: $darker;
   color: $light;
   border-radius: 2rem;
   font-size: 1.5rem;
 }
 
 input {
+  @include glass-morphism;
+  background-color: $darker;
   height: 2rem;
   width: 69%;
   margin-left: 1rem;
+  padding: 1rem 0.5rem;
   border-radius: 2rem;
+  font-size: 1.5rem;
+  color: $light;
 }
 
 img {
