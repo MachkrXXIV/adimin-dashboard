@@ -220,6 +220,8 @@ body main .reviews {
 }
 
 body main .reviews .card {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +241,11 @@ body main .reviews .card {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body main .reviews .card:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 
 body main .announcement-container {
@@ -321,6 +328,11 @@ button {
   color: #efeff1;
   border-radius: 2rem;
   font-size: 1.5rem;
+}
+
+h1,
+.logo {
+  cursor: default;
 }
 
 input {
