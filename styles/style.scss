@@ -36,6 +36,10 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
   width: $size;
 }
 
+@mixin shadow-effect {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 @mixin sliding-transition($name, $time: 1s) {
   animation: $name $time ease-in-out;
 }
@@ -49,6 +53,7 @@ $bg-gradient: linear-gradient(45deg, $purple, $pink);
   gap: 0.5rem;
   background-color: $darkest;
   border-radius: 2rem;
+  @include shadow-effect;
 }
 
 :root {
@@ -75,6 +80,7 @@ body {
 
   & > * {
     @include glass-morphism;
+    @include shadow-effect;
     position: relative;
     z-index: 1;
     border-radius: 2rem;
@@ -213,7 +219,7 @@ body {
       gap: 1rem;
 
       .card {
-        @include transition-ease(200ms);
+        @include transition-ease(100ms);
         @include flex-column;
         @include glass-morphism;
         @include widget;
@@ -267,6 +273,7 @@ i:hover {
 
 button {
   @include glass-morphism;
+  @include transition-ease(100ms);
   cursor: pointer;
   padding: 0 1rem;
   display: block;
@@ -274,11 +281,20 @@ button {
   color: $light;
   border-radius: 2rem;
   font-size: 1.5rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
 }
 
 h1,
-.logo {
+h2,
+h3,
+h4 .logo,
+.nav-container > * {
   cursor: default;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 input {
@@ -298,7 +314,9 @@ input {
 }
 
 img {
+  @include glass-morphism;
   @include img-sizing(3rem);
+  @include shadow-effect;
   cursor: pointer;
   border-radius: 50%;
 }

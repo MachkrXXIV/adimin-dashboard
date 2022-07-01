@@ -31,6 +31,8 @@ body > * {
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   position: relative;
   z-index: 1;
   border-radius: 2rem;
@@ -220,8 +222,8 @@ body main .reviews {
 }
 
 body main .reviews .card {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +240,8 @@ body main .reviews .card {
   gap: 0.5rem;
   background-color: rgba(14, 2, 34, 0.5);
   border-radius: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -265,6 +269,8 @@ body main .announcement-container {
   gap: 0.5rem;
   background-color: rgba(14, 2, 34, 0.5);
   border-radius: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   gap: 1rem;
 }
 
@@ -285,6 +291,8 @@ body main .friends-container {
   gap: 0.5rem;
   background-color: rgba(14, 2, 34, 0.5);
   border-radius: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   grid-column: auto / -1;
 }
 
@@ -321,6 +329,8 @@ button {
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.45);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   cursor: pointer;
   padding: 0 1rem;
   display: block;
@@ -328,11 +338,21 @@ button {
   color: #efeff1;
   border-radius: 2rem;
   font-size: 1.5rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 h1,
-.logo {
+h2,
+h3,
+h4 .logo,
+.nav-container > * {
   cursor: default;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 input {
@@ -356,8 +376,15 @@ input:focus {
 }
 
 img {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   height: 3rem;
   width: 3rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   cursor: pointer;
   border-radius: 50%;
 }
